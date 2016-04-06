@@ -1,0 +1,121 @@
+<html>
+	<head>
+		<title>JSBattleship</title>
+		<!-- Load stylesheet -->
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<!-- Load favicon -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+		<!-- See if scripts are disabled in this browser -->
+		<noscript>Your browser doesn't support Javascript!</noscript>
+		<!-- We will be using the Development edition of jQuery for programming -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js" defer></script>
+		<script>window.jQuery || document.write('<script type="text/javascript" src="js/jquery-2.1.3.js" defer>\x3C/script>')</script>
+		<!-- We load our own superior scripts here -->
+		<script type="text/javascript" src="js/apikey.js" defer></script>
+		<script type="text/javascript" src="js/battleship.js" defer></script>
+	</head>
+	<body>
+		<h1>JSBattleship</h1>
+		<h2>Your Dock</h2>
+		<table class="ship-legend">
+		<thead>
+			<tr>
+				<td>
+					<b>Name</b>
+				</td>
+				<td>
+					<b>Size</b>
+				</td>
+				<td>
+					<b>Turn</b>
+				</td>
+				<td>
+					<b>Stock</b>
+				</td>
+				</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>Aircraft carrier</td>
+			<td>
+				<table>
+					<tr class="acc">
+						<td><div class="acc-part"></div></td>
+						<td><div class="acc-part"></div></td>
+						<td><div class="acc-part"></div></td>
+						<td><div class="acc-part"></div></td>
+						<td><div class="acc-part"></div></td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<button type="button" id="accHorizontal">---</button>
+			</td>
+			<td>
+				<p id="accStock"></p>
+			</td>
+		</tr>
+		<tr>
+			<td>Battleship</td>
+			<td>
+				<table>
+					<tr class="bs">
+						<td><div class="bs-part"></div></td>
+						<td><div class="bs-part"></div></td>
+						<td><div class="bs-part"></div></td>
+						<td><div class="bs-part"></div></td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<button type="button" id="bsHorizontal">---</button>
+			</td>
+			<td>
+				<p id="bsStock"></p>
+			</td>
+		</tr>
+		<tr>
+			<td>Destroyer</td>
+			<td>
+				<table>
+					<tr class="ds">
+						<td><div class="ds-part"></div></td>
+						<td><div class="ds-part"></div></td>
+						<td><div class="ds-part"></div></td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<button type="button" id="dsHorizontal">---</button>
+			</td>
+			<td>
+				<p id="dsStock"></p>
+			</td>
+		</tr>
+		<tr>
+			<td>Patrol boat</td>
+			<td>
+				<table>
+					<tr class="pb">
+						<td><div class="pb-part"></div></td>
+						<td><div class="pb-part"></div></td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<button type="button" id="pbHorizontal">---</button>
+			</td>
+			<td>
+				<p id="pbStock"></p>
+			</td>
+		</tr>
+		</tbody>
+		</table>
+		<!-- Gameboard will be drawn here -->
+		<div id="playground" class="playground">
+			<table id="grid" class="grid">
+				<tbody></tbody>
+			</table>
+		</div>		
+	</body>
+</html

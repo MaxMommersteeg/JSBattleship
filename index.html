@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JSBattleship</title>
+		<!-- Load stylesheet -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<!-- Load favicon -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+		<!-- See if scripts are disabled in this browser -->
+		<noscript>Your browser doesn't support Javascript!</noscript>
+		<!-- We will be using the Development edition of jQuery for programming -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js" defer></script>
+		<script>window.jQuery || document.write('<script type="text/javascript" src="js/jquery-2.1.3.js" defer>\x3C/script>')
+		</script>
+		<!-- We load our own superior scripts here -->
+        <script type="text/javascript" src="js/apikey.js" defer></script>
+		<script type="text/javascript" src="js/prototype.js" defer></script>
+		<script type="text/javascript" src="js/index.js" defer></script>
+		<script type="text/javascript" src="js/battleship.js" defer></script>
+	</head>
+
+	<body>
+		<main role="main" class="main-container">
+			
+			<header class="main-header">
+				<div class="container">
+					<h1 id="title" class="text-center">Battleship gamelist</h1>
+					<p class="text-center">Unistaller Productions - The way its meant to be unistalled!</p>
+				</div>
+			</header>
+
+            <!-- Section for the gamelist -->
+			<section id="gamelist" class="container content">
+                <div class="table-nav">
+                    <button type="button" class="button" id="refreshGames">Refresh</button>
+                    <button type="button" class="button" id="startGameAI">Game with CPU</button>
+                    <button type="button" class="button" id="startGamePlayer">Game with player</button>
+                    <button type="button" class="button" id="deleteGames">Delete games</button>
+                </div>
+                <div class="row">
+	                <div id="gameTable" class="invisible">
+	                    <table class="table">
+	                        <thead class="table-header">
+	                        <tr>
+	                            <th>Game ID</th>
+	                            <th>Status</th>
+	                            <th>Enemy ID</th>
+	                            <th>Enemy</th>
+	                            <th>Play</th>
+	                        </tr>
+	                        </thead>
+	                        <tbody class="text-center">
+
+	                        </tbody>
+	                    </table>
+	                </div>
+                </div>
+			</section>
+
+            <!-- Section for the gameboard -->
+			<section id="gameboard" class="container content invisible">
+                <div class="table-nav">
+                    <button type="button" class="button" id="showGamelist">Back</button>
+					<button type="button" class="button invisible" id="submitBoard">Confirm board</button>
+					<button type="button" class="button invisible" id="refreshGame">Refresh game</button>
+					<button type="button" class="button invisible" id="turnShip">Ship horizontal</button>
+                </div>
+                <div class="row">
+                	<div class="col-md-4">
+					<table id="gameStats" class="game-stats">
+						<caption><h2>Game information</h2></caption>
+						<tbody>
+						</tbody>
+					</table>
+					</div>
+					<div class="col-md-4">
+					<table id="dock" class="dock">
+						<caption><h2>Dock</h2></caption>
+						<tbody>
+						</tbody>
+					</table>
+					</div>
+				</div>
+				<div class="row">
+					<hr />
+				</div>
+				<div class="row">
+					<div class="col-md-5">
+						<table id="playerGrid" class="player-grid">
+							<caption><h2>My board</h2></caption>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-5">
+						<table id="enemyGrid" class="enemy-grid invisible">
+						<caption><h2>Enemy board</h2></caption>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+            </section>
+		</main>
+	</body>
+</html>
